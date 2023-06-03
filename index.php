@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-    include './config/connection.php';
+include './config/connection.php';
 
 ?>
 
@@ -33,16 +33,31 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                    </tr>
-                </tbody>
+                <?php
+
+                $query = "SELECT * FROM foods";
+                $result = mysqli_query($connection, $query);
+                $number = 1;
+
+                // fetch data menjadi array
+                while ($data = mysqli_fetch_assoc($result)) {
+                    ?>
+
+                    <tbody>
+                        <tr>
+                            <td scope="row"><?= $number++ ?></td>
+                            <td scope="row"><?= $data['name']?></td>
+                            <td scope="row"><?= $data['favorite_food']?></td>
+                            <td scope="row"><?= $data['favorite_drink']?></td>
+                            <td scope="row"><?= $data['favorite_fruit']?></td>
+                            <td scope="row"></td>
+                        </tr>
+                    </tbody>
+
+
+                <?php
+                }
+                ?>
 
             </table>
         </div>

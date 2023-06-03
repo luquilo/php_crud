@@ -1,5 +1,9 @@
+body {
+  background: #333;
+}
+
 h1 {
-  color: red;
+  color: yellow;
 }
 
 table {
