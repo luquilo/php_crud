@@ -12,12 +12,13 @@ include './config/connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favorite beverage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div>
         <h1>favorite beverage table</h1>
+        <a href="create.php">submit</a>
         <div class="table-container">
             <table>
 
