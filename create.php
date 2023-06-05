@@ -37,7 +37,7 @@
                         <input type="text" id="form_4" name="favorite_fruit">
                     </div>
                     <div>
-                        <button>Submit</button>
+                        <button>SUBMIT</button>
                     </div>
                 </form>
             </div>
