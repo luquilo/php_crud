@@ -43,7 +43,7 @@
                     <div>
                         <input type="hidden" name="id" value=<?= $id ?>>
                         <label for="form_4">favorite fruit</label>
-                        <input type="text" id="form_4" name="favorite_fruit" value='<?= $data['favorite_fruit'] ?>'>
+                        <input type="text" id="form_4" name="favorite_fruit" value="<?= $data['favorite_fruit'] ?>">
                     </div>
                     <div>
                         <button>Submit</button>

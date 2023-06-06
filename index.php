@@ -18,7 +18,8 @@ include './config/connection.php';
 <body>
     <div class="container">
         <h1>college students favorite meals</h1>
-        <a class="add_button" href="create.php">TAMBAH DATA BARU</a>
+        <a class="index-php__button" href="create.php">TAMBAH DATA BARU</a>
+        
         <div class="table-container">
             <table>
 
@@ -46,23 +47,33 @@ include './config/connection.php';
 
                     <tbody>
                         <tr>
-                            <td scope="row"><?= $number++ ?></td>
-                            <td scope="row"><?= $data['name']?></td>
-                            <td scope="row"><?= $data['favorite_food']?></td>
-                            <td scope="row"><?= $data['favorite_drink']?></td>
-                            <td scope="row"><?= $data['favorite_fruit']?></td>
                             <td scope="row">
-                                <a href="edit.php?id=<?= $data['food_id']?>">edit</a>
+                                <?= $number++ ?>
+                            </td>
+                            <td scope="row">
+                                <?= $data['name'] ?>
+                            </td>
+                            <td scope="row">
+                                <?= $data['favorite_food'] ?>
+                            </td>
+                            <td scope="row">
+                                <?= $data['favorite_drink'] ?>
+                            </td>
+                            <td scope="row">
+                                <?= $data['favorite_fruit'] ?>
+                            </td>
+                            <td scope="row">
+                                <a href="edit.php?id=<?= $data['food_id'] ?>">edit</a>
                                 <form action="delete.php" method="post">
-                                    <input type="hidden" name="id" value="<?= $data['food_id']?>">
-                                    <button>HAPUS</button>
+                                    <input type="hidden" name="id" value="<?= $data['food_id'] ?>">
+                                    <button class="top_button">HAPUS</button>
                                 </form>
                             </td>
                         </tr>
                     </tbody>
 
 
-                <?php
+                    <?php
                 }
                 ?>
 
